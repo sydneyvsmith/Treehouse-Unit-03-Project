@@ -1,0 +1,241 @@
+/* Base Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Merriweather' , serif;
+}
+
+header {
+    background-color: #2d3945;
+}
+
+header h1 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+.copyright p {
+    margin: 2rem 0 7rem;
+    font-style: italic;
+    text-align: center;
+    color: #aaafb4;
+}
+
+/* Layout Styles */
+
+.wrapper {
+    padding: 1.4rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+.intro {
+    background-color: #d6e6f5;
+}
+
+
+.intro h2,
+.intro p {
+    text-align: center;
+}
+
+.intro h2 {
+    color: #2d3945;
+    font-size: 1.4rem;
+    margin-top: 1rem;
+}
+
+.intro p {
+    color: #aaafb4;
+    font-size: 1.2rem;
+    margin: 1rem 0 1rem;
+}
+
+/* Form Styles */
+
+.formarea {
+    border-top: 4px solid #2d3945;
+}
+
+form,
+fieldset {
+    display: flex;
+    flex-direction: column;
+}
+
+
+form {
+    border-top: 3px solid #2d3945;
+    margin-top: .25rem;
+    padding-top: 2rem;
+}
+
+fieldset {
+    border: hidden;
+}
+
+
+legend,
+label {
+    color: #2d3945;
+}
+
+legend {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+label {
+    font-weight: 300;
+}
+
+input[type=text],
+input[type=tel],
+input[type=email],
+select,
+textarea,
+button {
+    width: 100%;
+    border-radius: 5px;
+    border: hidden;
+    font-family: inherit;
+}
+
+input[type=text],
+input[type=tel],
+input[type=email],
+select,
+textarea {
+    background-color: #eff0f1;
+    font-size: 1rem;
+}
+
+
+input[type=text],
+input[type=tel],
+input[type=email],
+select {
+    height: 3.5rem;
+    margin-top: .5rem;
+    padding: 0 1rem;
+}
+
+textarea {
+    height: 8rem;
+    padding: 1rem;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.formoption,
+.form-item,
+.newsletter label {
+    margin-bottom: 1rem;
+}
+
+input[id=zip] {
+    width: 50%;
+}
+
+.newsletter {
+    border-top: 3px solid #2d3945;
+    margin-top: 2rem;
+    padding-top: 2rem;
+}
+
+input[type=checkbox],
+input[type=radio] {
+    margin-right: 1rem;
+}
+
+
+.newsletterlabels {
+    margin-top: 2rem;
+}
+
+button {
+    background-color: #4ebbb5;
+    margin-top: 2rem;
+    height: 3.5rem;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+input::placeholder,
+select {
+    font-family: 'Merriweather', serif;
+    color: #adb2b7
+}
+
+input::placeholder {
+    font-style: italic;
+    text-align: right;
+}
+
+select {
+    font-size: 1rem;
+}
+
+
+/* Pseudo Class Styles*/
+
+input:focus,
+select:focus,
+textarea:focus {
+    border: 2px solid hsl(210, 33%, 41%);
+    background-color: #d6e6f5;
+    outline: none;
+    transition: background-color 2s;
+}
+
+button:hover {
+    background-color: #56d2cb;
+    transition: background-color 1s;
+}
+
+
+ /* Media Queries */
+
+ @media (min-width: 768px) {
+
+    .form-item {
+        margin-bottom: 1rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        
+    }
+
+    .form-item > input {
+        flex: 3;
+        justify-content: flex-start;
+        
+    }
+
+    .form-item > select {
+        flex: 3.2;
+    }
+
+    .form-item > label {
+        flex-basis: 25%;
+    }
+
+    input[id=zip] {
+           flex: .3;
+    }
+
+
+ }
